@@ -23,7 +23,7 @@
 
   <dt>Edit photo</dt>
   <dd>
-    <form action="/update_photo/<%=@the_photo.poster.username %>">
+    <form action="/update_photo/<%=@the_photo.poster.username%>">
       <label for="browser_image">Image</label>
       <input id="browser_image" type="text" name="input_image" placeholder="Enter a URL for the image..." value="https://robohash.org/dolorehicincidunt.png?size=300x300&amp;set=set1">
 
@@ -36,13 +36,12 @@
 
   <dt>Delete photo</dt>
   <dd>
-    <a href="/delete_photo/777;">
+    <a href="/delete_photo/<%=@the_photo.id%>;">
       Delete this photo
     </a>
   </dd>
 </dl>
 
-<%#end%>
 
 <h2>Comments</h2>
 
