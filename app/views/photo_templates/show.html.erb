@@ -72,9 +72,9 @@
 <h3>Add a new comment</h3>
 
   <dd>
-    <form action="/add_new_comment/<%=@the_photo.id%>">
+    <form action="/add_new_comment/">
       <label for="photo_id">Photo ID</label>
-      <input id="photo_id" type="text" name="query_photo_id" placeholder="<%=@the_photo.id%>">
+      <input id="photo_id" type="text" name="query_photo_id" value="<%=@the_photo.id%>">
 
       <label for="browser_author_id">Author ID</label>
       <textarea id="browser_author_id" name="query_author_id" placeholder=""></textarea>
