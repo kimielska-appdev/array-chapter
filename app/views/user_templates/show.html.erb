@@ -13,10 +13,15 @@
   <dt>
     Edit user
   </dt>
+    <dd>
+      <form action="/update_user/<%=@the_user.id%>">
+        <label for="browser_user">Username</label>
+        <input id="browser_user" type="text" name="new_username" placeholder="Enter a username..." value = <%=@the_user.username%>>
 
-  <dd>
-    #form goes here
-  </dd>
+        <button>Update user</button>
+      </form>
+    </dd>
+
 </dl>
 
 <h2>Own photos (<%=@the_user.own_photos%>)</h2>

@@ -72,11 +72,11 @@ class PhotosController < ApplicationController
   end
 
    def add_comment
-     the_id = params.fetch(":path_photo_id")
+     #the_id = params.fetch(":path_photo_id")
 
-     matching_comment = Photo.where({ :id => the_id })
+     #matching_comment = Photo.where({ :id => the_id })
 
-     the_comment = matching_comment.at(0)
+     #the_comment = matching_comment.at(0)
 
      input_photo_id = params.fetch("query_photo_id")
      input_author_id = params.fetch("query_author_id")
