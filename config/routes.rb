@@ -18,4 +18,6 @@ get("/update_photo/:modify_id",{:controller=>"photos", :action=>"update"})
 
 get("/add_new_comment/:path_photo_id", {:controller =>"photos", :action=>"add_comment"})
 
+get("/insert_user",{:controller => "users", :action=>"create"})
+
 end

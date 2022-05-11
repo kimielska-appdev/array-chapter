@@ -72,23 +72,24 @@ class PhotosController < ApplicationController
   end
 
    def add_comment
-     #the_id = params.fetch("modify_id")
+     the_id = params.fetch(":path_photo_id")
 
-     #matching_photos = Photo.where({ :id => the_id })
+     matching_comment = Photo.where({ :id => the_id })
 
-     #the_photo = matching_photos.at(0)
+     the_comment = matching_comment.at(0)
 
-  #   input_image = params.fetch("query_image")
-  #   input_caption = params.fetch("query_caption")
-  #   #input_owner_id = params.fetch("query_owner_id")
+     input_photo_id = params.fetch("query_photo_id")
+     input_author_id = params.fetch("query_author_id")
+     input_comment = params.fetch("query_comment")
 
-  #   the_photo.image = input_image
-  #   the_photo.caption = input_caption
+     the_comment.id = input_photo_id
+     the_comment.poster.username = input_author_id
+     the_comment.commenter = input_comment
 
-  #   the_photo.save
+     the_comment.save
 
     #render({ :template => "photo_templates/update.html.erb" })
 
-    redirect_to("/photos/" + the_photo.id.to_s)
+    redirect_to("/photos/" + the_comment.id.to_s)
   end
 end
